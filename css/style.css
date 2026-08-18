@@ -687,6 +687,7 @@ ul {
 .check-cyan li::before { color: var(--cyan); }
 .check-purple li::before { color: var(--purple); }
 .check-lime li::before { color: var(--lime); }
+.check-yellow li::before { color: var(--yellow); }
 
 .mh-intro {
   max-width: 820px;
@@ -1137,6 +1138,157 @@ ul {
   color: var(--muted);
 }
 
+.nic-sub {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #111;
+  margin: 0 0 12px;
+}
+
+.nic-block .icon-heading img {
+  width: 110px;
+}
+
+.nic-block .health-ekg {
+  width: 158px;
+}
+
+.game-cta {
+  background-color: #28282c;
+  text-align: center;
+  padding: 0 0 40px;
+  overflow: hidden;
+  border-left: var(--side-stripe) solid #fff;
+  border-right: var(--side-stripe) solid #fff;
+}
+
+.game-cta::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: calc(100vw * 100 / 2560);
+  min-height: 40px;
+  background-image: url("https://media.cwd-cdn.com/not-en-experiment-english/images/hero-smoke.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
+  transform: scaleY(-1);
+}
+
+.game-cta h3 {
+  margin: 20px 0 0;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.game-cta h2 {
+  margin: 0 0 12px;
+  color: var(--yellow);
+  font-size: clamp(42px, 8vw, 72px);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.game-cta img {
+  width: min(280px, 70%);
+  margin: 0 auto;
+}
+
+.ing-split {
+  display: grid;
+  grid-template-columns: minmax(160px, 0.9fr) 1.3fr;
+  gap: 32px;
+  align-items: center;
+  margin: 8px 0 40px;
+}
+
+.ing-split img {
+  width: min(320px, 100%);
+  margin: 0 auto;
+}
+
+.acc-toggle {
+  border-bottom: 4px solid #333;
+  margin: 0 0 6px;
+}
+
+.acc-toggle:not([open]) > *:not(summary) {
+  display: none;
+}
+
+.acc-toggle summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  list-style: none;
+  cursor: default;
+  font-size: 18px;
+  font-weight: 800;
+  color: #000;
+  padding: 12px 0;
+  user-select: none;
+  pointer-events: none;
+}
+
+.acc-toggle summary::-webkit-details-marker,
+.acc-toggle summary::marker {
+  display: none;
+  content: none;
+}
+
+.acc-toggle summary::after {
+  content: "+";
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--acc, var(--lime));
+  color: #fff;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.acc-lime { --acc: var(--lime); }
+.acc-orange { --acc: var(--orange); }
+
+.acc-toggle[open] summary::after {
+  content: "\2212";
+}
+
+.acc-toggle ul,
+.acc-toggle p {
+  margin: 0;
+  padding: 4px 0 16px 1.2em;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.acc-toggle p {
+  padding-left: 0;
+}
+
+.health-row {
+  display: grid;
+  grid-template-columns: minmax(140px, 220px) 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.health-row img {
+  width: min(180px, 100%);
+  margin: 0 auto;
+}
+
 .smoke {
   background: #111 url("https://media.cwd-cdn.com/not-en-experiment-english/images/smoke-bg.png") center bottom / contain no-repeat;
   color: var(--white);
@@ -1319,6 +1471,8 @@ ul {
   .grid-4,
   .weight-grid,
   .icon-cols,
+  .ing-split,
+  .health-row,
   .split,
   .page-hero,
   .contact-form .name-row,
