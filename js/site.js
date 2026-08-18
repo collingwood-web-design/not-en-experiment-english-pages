@@ -164,19 +164,4 @@
     });
     go(index);
   });
-
-  var contact = document.getElementById("contact-form");
-  if (contact) {
-    contact.addEventListener("submit", function (e) {
-      e.preventDefault();
-      if (document.getElementById("website") && document.getElementById("website").value) {
-        return;
-      }
-      var note = document.getElementById("form-note");
-      if (note) {
-        note.textContent =
-          "Thanks. This static copy of the site does not send messages. Please use the live form at notanexperiment.ca if you need a reply.";
-      }
-    });
-  }
 })();
