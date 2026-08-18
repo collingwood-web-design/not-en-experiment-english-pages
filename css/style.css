@@ -1055,6 +1055,47 @@ ul {
   width: 100%;
 }
 
+.parent-split {
+  display: grid;
+  grid-template-columns: minmax(140px, 0.8fr) 1.4fr;
+  gap: 32px;
+  align-items: center;
+  margin: 16px 0 28px;
+}
+
+.parent-split img {
+  width: min(200px, 100%);
+  margin: 0 auto;
+}
+
+.parent-sub {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0 0 12px;
+}
+
+.parent-video {
+  display: block;
+  margin: 8px 0 18px;
+}
+
+.parent-video img {
+  width: min(520px, 100%);
+}
+
+.accent-olive { color: #a5b623; }
+.check-olive li::before { color: #a5b623; }
+
+.play-list li::before {
+  content: "\f144";
+  color: var(--purple);
+}
+
+.play-list a {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
 .side-img {
   max-width: 240px;
   margin: 0 auto;
@@ -1616,6 +1657,7 @@ ul {
   .health-row,
   .split,
   .quit-split,
+  .parent-split,
   .page-hero,
   .contact-form .name-row,
   .industry-split {
