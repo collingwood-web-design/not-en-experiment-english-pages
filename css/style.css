@@ -105,16 +105,16 @@ ul {
 
 .site-header {
   background: var(--white);
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
   pointer-events: auto;
 }
 
 .nav-row {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 10px 24px;
+  gap: 8px;
+  padding: 16px 24px 4px;
   position: relative;
 }
 
@@ -125,8 +125,11 @@ ul {
 }
 
 .logo img {
-  width: 220px;
+  width: 300px;
+  max-width: min(300px, calc(100vw - 96px));
   height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .nav-open {
@@ -140,8 +143,7 @@ ul {
 .nav {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 6px 18px;
+  justify-content: center;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -149,15 +151,23 @@ ul {
   z-index: 2;
 }
 
+.nav li {
+  padding-right: 22px;
+}
+
+.nav li:last-child {
+  padding-right: 0;
+}
+
 .nav a {
   display: inline-block;
   color: #000;
   font-weight: 700;
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 6px 2px;
+  padding: 4px 0 16px;
   cursor: pointer;
   pointer-events: auto;
 }
@@ -1720,22 +1730,51 @@ ul {
     grid-template-columns: 1fr;
   }
 
-  .nav-toggle { display: block; }
+  .nav-toggle {
+    display: block;
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: end;
+  }
+
+  .nav-row {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 0 12px;
+    padding: 12px 16px;
+  }
+
+  .logo {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .logo img {
+    width: 210px;
+  }
 
   .nav {
     display: none;
     flex-direction: column;
+    align-items: center;
     width: 100%;
-    padding: 12px 0 18px;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    padding: 8px 0 12px;
+  }
+
+  .nav li {
+    padding-right: 0;
+  }
+
+  .nav a {
+    padding: 10px 8px;
   }
 
   .nav.is-open,
   .nav-open:checked ~ .nav {
     display: flex;
-  }
-
-  .nav-row {
-    flex-wrap: wrap;
   }
 
   .weight-grid {
