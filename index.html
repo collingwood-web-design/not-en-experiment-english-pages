@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Not An Experiment | DON’T TREAT YOUR HEALTH LIKE AN EXPERIMENT</title>
+  <link rel="icon" href="https://media.cwd-cdn.com/not-en-experiment-english/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="lang-bar"><a href="https://www.pasuneexperience.ca/" target="_blank" rel="noopener">FR</a></div>
+  <header class="site-header">
+    <div class="nav-row">
+      <a class="logo" href="index.html"><img src="https://media.cwd-cdn.com/not-en-experiment-english/images/logo.png" alt="Not An Experiment"></a>
+      <button class="nav-toggle" type="button" aria-label="Menu">☰</button>
+      <ul class="nav">
+        <li><a class="is-active" href="index.html">Home</a></li>
+        <li><a href="mental-health.html">Mental Health</a></li>
+        <li><a href="nicotine.html">Nicotine</a></li>
+        <li><a href="cannabis.html">Cannabis</a></li>
+        <li><a href="help-to-quit.html">Help to Quit</a></li>
+        <li><a href="parents.html">Parents</a></li>
+        <li><a href="educators.html">Educators</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1><em>DON’T TREAT YOUR HEALTH LIKE AN EXPERIMENT</em></h1>
+      <h2>Vaping can include nicotine or cannabis.<br>Both can harm the brain, lungs, and affect mental health.</h2>
+    </section>
+
+    <section class="section section-border-cyan">
+      <div class="wrap">
+        <div class="icon-heading">
+          <img src="https://media.cwd-cdn.com/not-en-experiment-english/images/calculator-icon.png" alt="">
+          <h1 class="title-underline title-cyan">Vaping Calculator</h1>
+        </div>
+        <div class="grid-2">
+          <div>
+            <p>Easily figure out just how much money will be back in your pocket when you quit vaping with this handy calculator.</p>
+            <form class="calc" id="vape-calc" action="#" method="get">
+              <label>Select vape type <span aria-hidden="true">*</span></label>
+              <div class="radios">
+                <label><input type="radio" name="vape-type" value="disposable" checked> DISPOSABLE</label>
+                <label><input type="radio" name="vape-type" value="refillable"> REFILLABLE</label>
+              </div>
+              <div id="calc-disposable">
+                <label for="vapes-week">Vapes per week</label>
+                <input id="vapes-week" type="number" min="1" max="150" step="1">
+                <label for="price-vape">Price per vape</label>
+                <div class="input-affix"><input id="price-vape" type="number" min="0" step="0.01"><span>CAD</span></div>
+                <label for="disp-week">Disposable cost per week</label>
+                <div class="input-affix"><span>$</span><input id="disp-week" class="result" type="text" readonly></div>
+                <label for="disp-month">Disposable cost per month</label>
+                <div class="input-affix"><span>$</span><input id="disp-month" class="result" type="text" readonly></div>
+                <label for="disp-year">Disposable cost per year</label>
+                <div class="input-affix"><span>$</span><input id="disp-year" class="result" type="text" readonly></div>
+              </div>
+              <div id="calc-refillable" class="calc-group hidden">
+                <label for="pods-week">Vape cartridge pods per week</label>
+                <input id="pods-week" type="number" min="1" max="150" step="1">
+                <label for="price-pod">Price per cartridge pod</label>
+                <div class="input-affix"><input id="price-pod" type="number" min="0" step="0.01"><span>CAD</span></div>
+                <label for="refills-week">Refills per week</label>
+                <input id="refills-week" type="number" min="1" max="150" step="1">
+                <label for="price-refill">Price per refill</label>
+                <div class="input-affix"><input id="price-refill" type="number" min="0" step="0.01"><span>CAD</span></div>
+                <label for="ref-week">Refillable cost per week</label>
+                <input id="ref-week" class="result" type="text" readonly>
+                <label for="ref-month">Refillable cost per month</label>
+                <input id="ref-month" class="result" type="text" readonly>
+                <label for="ref-year">Refillable cost per year</label>
+                <input id="ref-year" class="result" type="text" readonly>
+              </div>
+            </form>
+          </div>
+          <div>
+            <img src="https://media.cwd-cdn.com/not-en-experiment-english/images/spend-money.png" alt="What would you rather spend your money on">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-border-orange">
+      <div class="wrap">
+        <div class="center"><h1 class="title-underline title-orange">Quick Facts</h1></div>
+        <div class="facts">
+          <article class="fact-card"><p>Vaping can negatively affect mental health.</p></article>
+          <article class="fact-card"><p>Vapes can contain high levels of nicotine and cannabis, increasing the risk of addiction.</p></article>
+          <article class="fact-card"><p>Youth are targeted with candy and fruit-flavoured e-liquid. Don’t be tricked.</p></article>
+          <article class="fact-card"><p>Vapes can create toxic waste that harms the environment.</p></article>
+          <article class="fact-card"><p>Whether someone is vaping nicotine or cannabis, there is support available to help youth reduce or quit.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="center"><h1 class="title-underline title-yellow">What are vapes?</h1></div>
+        <div class="grid-2">
+          <img src="https://media.cwd-cdn.com/not-en-experiment-english/images/vapes-shape.jpg" alt="NAE- What are Vapes?">
+          <img src="https://media.cwd-cdn.com/not-en-experiment-english/images/vapes-device.jpg" alt="NAE- What are Vapes?">
+        </div>
+        <p class="center" style="margin-top:18px;">They come in many shapes and sizes from box-like devices with mouthpieces to smaller pens.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="center"><h1>The Process</h1></div>
+        <img class="center-block" src="https://media.cwd-cdn.com/not-en-experiment-english/images/vape-process.jpg" alt="The process of vaping">
+        <ol>
+          <li>The substance is heated into an aerosol and inhaled.</li>
+          <li>The chemical particles quickly enter the bloodstream and circulate throughout the body, including the brain.</li>
+          <li>Any remaining aerosol is exhaled.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <h1>The Industry</h1>
+        <div class="grid-2">
+          <div>
+            <h3>Designed to Keep You Hooked</h3>
+            <p>Cigarette smoking rates in Canada are at their lowest point in 20 years, great news for everyone except the tobacco industry.<br>The industry needed to reinvent itself and vapes were their solution.</p>
+          </div>
+          <div>
+            <img src="https://media.cwd-cdn.com/not-en-experiment-english/images/targeting.png" alt="">
+            <ul class="check-list">
+              <li>The industry spends billions of dollars each year marketing it’s products.</li>
+              <li>The tobacco industry has a well-documented history of lying about the addictiveness and health effects of its products.</li>
+              <li>The industry needed to reinvent itself and vapes were their solution.</li>
+            </ul>
+          </div>
+        </div>
+        <h3 class="center">They are using the same marketing tactics</h3>
+        <div class="grid-4 tactic-grid">
+          <div>
+            <img src="https://media.cwd-cdn.com/not-en-experiment-english/images/flavours.png" alt="flavours">
+            <h3>flavours</h3>
+          </div>
+          <div>
+            <img src="https://media.cwd-cdn.com/not-en-experiment-english/images/influencer.png" alt="Influencer endorsements">
+            <h3>Influencer endorsements</h3>
+          </div>
+          <div>
+            <img src="https://media.cwd-cdn.com/not-en-experiment-english/images/lifestyle.png" alt="lifestyle advertising">
+            <h3>lifestyle advertising</h3>
+          </div>
+          <div>
+            <img src="https://media.cwd-cdn.com/not-en-experiment-english/images/packaging.png" alt="packaging">
+            <h3>packaging</h3>
+          </div>
+        </div>
+        <p>They are using the same marketing tactics—like flavours, influencer endorsements, lifestyle advertising, and packaging—that were successful in addicting generations of people to commercial tobacco products. These tactics are designed to addict a whole new generation to nicotine.</p>
+        <h2>The influence of tobacco companies now extends beyond nicotine products.</h2>
+        <p>Major tobacco corporations have invested heavily in cannabis companies whose vape products are sold in Canada, including through the Ontario Cannabis Store (OCS). They are involved in the sale of cannabis vape products and related technologies. This raises concern that the same industry that profited from nicotine addiction is now positioning itself within the growing cannabis vape market.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="center"><h1 class="title-underline title-cyan">Is it safe?</h1></div>
+        <p>E-cigarettes, e-liquid and cartridges/pods in Canada are controlled by federal and provincial restrictions to help people understand the risks and make informed choices.<br>In Ontario, all vaping products (nicotine or cannabis) must have clear labels. Packaging must show health warnings and identify the product and its strength/concentration.</p>
+        <h2 class="center">For example, as of July 2020, the labels of all vaping products must include:</h2>
+        <div class="icon-cols">
+          <div><i class="fa-solid fa-list"></i><h4>list of ingredients</h4></div>
+          <div><i class="fa-solid fa-triangle-exclamation"></i><h4>Standard health warning</h4></div>
+          <div><i class="fa-solid fa-file-lines"></i><h4>Standard nicotine statement</h4></div>
+        </div>
+        <div class="warning-box">
+          <h2>WARNING</h2>
+          <img class="center-block" src="https://media.cwd-cdn.com/not-en-experiment-english/images/health-warning.png" alt="">
+          <h3>Vaping products release chemicals that harm your health.</h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap center">
+        <h2>TAKE ACTION</h2>
+        <p>Learn more about the health effects of vaping and spread the word. Discuss vaping related problems. Visit the nicotine and cannabis page to learn more about the health effects of vaping.</p>
+        <div class="btn-row">
+          <a class="btn" href="nicotine.html">nicotine</a>
+          <a class="btn" href="cannabis.html">cannabis</a>
+        </div>
+        <h2>CONTINUE THE CONVERSATION</h2>
+        <ul>
+          <li>Should the government increase taxes on vaping products so that prices are similar to those of commercial tobacco products?</li>
+          <li>Should the sale of candy and fruit flavoured vaping liquids, known to attract young people, continue to be legal?</li>
+        </ul>
+        <h2>SPREAD THE WORD</h2>
+        <ul>
+          <li><a href="https://www.youtube.com/playlist?list=PLbbzYXkxKKB-nQC1Ib8rsCcBESycEM2_v" target="_blank" rel="noopener">Let’s Talk About Vaping</a></li>
+          <li><a href="https://www.youtube.com/playlist?list=PLbbzYXkxKKB9VQWUdgz2_uYhCf8-HMzKP" target="_blank" rel="noopener">Vape Facts</a></li>
+          <li>Put up <a href="https://media.cwd-cdn.com/not-en-experiment-english/docs/posters.pdf" target="_blank" rel="noopener">posters</a> and read <a href="https://media.cwd-cdn.com/not-en-experiment-english/docs/announcements.pdf" target="_blank" rel="noopener">announcements</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="escape">
+      <h3>ESCAPE THE</h3>
+      <h2>EXPERIMENT</h2>
+      <img src="https://media.cwd-cdn.com/not-en-experiment-english/images/escape-footer.png" alt="EscapeTheExperiment">
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    © Simcoe Muskoka District Health Unit | <span id="footer-date"></span> | All rights reserved
+    <p>Design &amp; Develop | <a href="https://www.collingwoodwebdesign.com/" target="_blank" rel="noopener">Collingwood WEB Design</a></p>
+  </footer>
+  <script src="js/site.js"></script>
+</body>
+</html>

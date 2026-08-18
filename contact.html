@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us | Not An Experiment</title>
+  <link rel="icon" href="https://media.cwd-cdn.com/not-en-experiment-english/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="lang-bar"><a href="https://www.pasuneexperience.ca/" target="_blank" rel="noopener">FR</a></div>
+  <header class="site-header">
+    <div class="nav-row">
+      <a class="logo" href="index.html"><img src="https://media.cwd-cdn.com/not-en-experiment-english/images/logo.png" alt="Not An Experiment"></a>
+      <button class="nav-toggle" type="button" aria-label="Menu">☰</button>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mental-health.html">Mental Health</a></li>
+        <li><a href="nicotine.html">Nicotine</a></li>
+        <li><a href="cannabis.html">Cannabis</a></li>
+        <li><a href="help-to-quit.html">Help to Quit</a></li>
+        <li><a href="parents.html">Parents</a></li>
+        <li><a href="educators.html">Educators</a></li>
+        <li><a class="is-active" href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <section class="section smoke">
+      <div class="wrap">
+        <h1>CONTACT US</h1>
+        <p><strong><em>Not An Experiment is maintained by the Simcoe Muskoka District Health Unit. This form is for questions related to this website and the resources listed within it.</em></strong></p>
+        <ul>
+          <li><strong><em>Please note that medical advice will not be provided.</em></strong></li>
+          <li><strong><em>Please do not include any private, sensitive, or personal health information in your message.</em></strong></li>
+          <li><strong><em>You’ll receive a response within 5 business days.</em></strong></li>
+        </ul>
+        <form class="contact-form" id="contact-form" action="#" method="post">
+          <div class="name-row">
+            <div>
+              <label for="first">Name*</label>
+              <input id="first" name="first" type="text" required>
+              <small>First</small>
+            </div>
+            <div>
+              <label for="last">Last*</label>
+              <input id="last" name="last" type="text" required>
+              <small>Last</small>
+            </div>
+          </div>
+          <label for="email">Email*</label>
+          <input id="email" name="email" type="email" required>
+          <label for="message">Message*</label>
+          <textarea id="message" name="message" required></textarea>
+          <label class="hp" for="website">If you are human, leave this field blank.</label>
+          <input class="hp" id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+          <p><button class="btn" type="submit">SUBMIT</button></p>
+          <p class="form-note" id="form-note"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    © Simcoe Muskoka District Health Unit | <span id="footer-date"></span> | All rights reserved
+    <p>Design &amp; Develop | <a href="https://www.collingwoodwebdesign.com/" target="_blank" rel="noopener">Collingwood WEB Design</a></p>
+  </footer>
+  <script src="js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+.wrangler/
+.env
+.env.*
+_media/
+_download_media.py
+_upload_r2.ps1
+*.pyc
+__pycache__/
+.DS_Store
+Thumbs.db
