@@ -1,7 +1,8 @@
 (function () {
   var toggle = document.querySelector(".nav-toggle");
   var nav = document.querySelector(".nav");
-  if (toggle && nav) {
+  var navOpen = document.getElementById("nav-open");
+  if (toggle && nav && !navOpen) {
     toggle.addEventListener("click", function () {
       nav.classList.toggle("is-open");
     });
@@ -43,7 +44,7 @@
   }
 
   function money(n) {
-    return n ? n.toFixed(2) : "";
+    return n.toFixed(2);
   }
 
   function setVal(id, n) {
@@ -75,6 +76,94 @@
   });
 
   showType();
+
+  var sketchPath =
+    "M0.6 8.5 C 12 8.7, 22 7.6, 34 6.9 C 50 6.2, 62 6.4, 74 7.2 C 86 7.9, 93 8.2, 99.4 8.6";
+
+  var titles = document.querySelectorAll(".title-underline");
+  if (titles.length) {
+    titles.forEach(function (el, i) {
+      var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      svg.setAttribute("class", "title-mark");
+      svg.setAttribute("viewBox", "0 0 100 12");
+      svg.setAttribute("preserveAspectRatio", "none");
+      svg.setAttribute("aria-hidden", "true");
+      var path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      path.setAttribute("d", sketchPath);
+      path.setAttribute("pathLength", "1");
+      svg.appendChild(path);
+      el.appendChild(svg);
+    });
+
+    if ("IntersectionObserver" in window) {
+      var titleObserver = new IntersectionObserver(
+        function (entries, observer) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("is-marked");
+            observer.unobserve(entry.target);
+          });
+        },
+        { threshold: 0.45, rootMargin: "0px 0px -8% 0px" }
+      );
+      titles.forEach(function (el) {
+        titleObserver.observe(el);
+      });
+    } else {
+      titles.forEach(function (el) {
+        el.classList.add("is-marked");
+      });
+    }
+  }
+
+  document.querySelectorAll(".facts-carousel").forEach(function (carousel) {
+    var slides = Array.prototype.slice.call(carousel.querySelectorAll(".facts-slide"));
+    var prev = carousel.querySelector(".facts-prev");
+    var next = carousel.querySelector(".facts-next");
+    var dotsWrap = carousel.querySelector(".facts-dots");
+    var loop = carousel.getAttribute("data-loop") === "true";
+    var index = Math.max(0, slides.findIndex(function (slide) {
+      return slide.classList.contains("is-active");
+    }));
+
+    if (!slides.length || !prev || !next || !dotsWrap) return;
+
+    slides.forEach(function (_, i) {
+      var dot = document.createElement("button");
+      dot.type = "button";
+      dot.className = "facts-dot" + (i === index ? " is-active" : "");
+      dot.setAttribute("aria-label", "Show fact " + (i + 1));
+      dot.addEventListener("click", function () {
+        go(i);
+      });
+      dotsWrap.appendChild(dot);
+    });
+
+    function go(nextIndex) {
+      if (loop) {
+        nextIndex = (nextIndex + slides.length) % slides.length;
+      } else {
+        nextIndex = Math.max(0, Math.min(slides.length - 1, nextIndex));
+      }
+      index = nextIndex;
+      slides.forEach(function (slide, i) {
+        slide.classList.toggle("is-active", i === index);
+      });
+      Array.prototype.forEach.call(dotsWrap.children, function (dot, i) {
+        dot.classList.toggle("is-active", i === index);
+      });
+      prev.disabled = !loop && index === 0;
+      next.disabled = !loop && index === slides.length - 1;
+    }
+
+    prev.addEventListener("click", function () {
+      go(index - 1);
+    });
+    next.addEventListener("click", function () {
+      go(index + 1);
+    });
+    go(index);
+  });
 
   var contact = document.getElementById("contact-form");
   if (contact) {

@@ -16,7 +16,8 @@
   <header class="site-header">
     <div class="nav-row">
       <a class="logo" href="index.html"><img src="https://media.cwd-cdn.com/not-en-experiment-english/images/logo.png" alt="Not An Experiment"></a>
-      <button class="nav-toggle" type="button" aria-label="Menu">☰</button>
+      <input class="nav-open" id="nav-open" type="checkbox">
+      <label class="nav-toggle" for="nav-open" aria-label="Open menu">☰</label>
       <ul class="nav">
         <li><a href="index.html">Home</a></li>
         <li><a href="mental-health.html">Mental Health</a></li>
@@ -42,14 +43,19 @@
     <section class="section section-border-cyan">
       <div class="wrap">
         <div class="center"><h1 class="title-underline title-cyan">Quick Facts</h1></div>
-        <div class="facts">
-          <article class="fact-card"><p>About one-in-three (31%) youth aged 15-19 across Canada report vaping in the past 30 days, and nearly half (48%) report trying a vaping device in their lifetime.<sup>6</sup></p></article>
-          <article class="fact-card"><p>For every three young Canadians who experimented with vaping devices, one became a daily user.<sup>6</sup></p></article>
-          <article class="fact-card"><p>Most (87%) Ontario students who vaped in the past year reported using nicotine.<sup>7</sup></p></article>
-          <article class="fact-card"><p>Nearly half (43%) of Ontario secondary school students who vaped in the past year report that they first started to vape before grade 9.<sup>7</sup></p></article>
-          <article class="fact-card"><p>The prevalence of Ontario grade 12 students reporting vaping in the past year was twice that of grade 9 students.<sup>7</sup></p></article>
-          <article class="fact-card"><p>Two-thirds (67%) of Ontario students reported that it is easy or very easy to get vapes if they wanted them.<sup>7</sup></p></article>
-          <article class="fact-card"><p>Nearly two-thirds (63%) of Ontario students perceive a great risk of harm to their health associated with vaping regularly.<sup>7</sup></p></article>
+        <div class="facts-carousel" data-loop="true">
+          <button class="facts-arrow facts-prev" type="button" aria-label="Previous fact"></button>
+          <div class="facts-viewport">
+            <div class="facts-slide is-active"><p>About one-in-three (31%) youth aged 15-19 across Canada report vaping in the past 30 days, and nearly half (48%) report trying a vaping device in their lifetime.<sup>6</sup></p></div>
+            <div class="facts-slide"><p>For every three young Canadians who experimented with vaping devices, one became a daily user.<sup>6</sup></p></div>
+            <div class="facts-slide"><p>Most (87%) Ontario students who vaped in the past year reported using nicotine.<sup>7</sup></p></div>
+            <div class="facts-slide"><p>Nearly half (43%) of Ontario secondary school students who vaped in the past year report that they first started to vape before grade 9.<sup>7</sup></p></div>
+            <div class="facts-slide"><p>The prevalence of Ontario grade 12 students reporting vaping in the past year was twice that of grade 9 students.<sup>7</sup></p></div>
+            <div class="facts-slide"><p>Two-thirds (67%) of Ontario students reported that it is easy or very easy to get vapes if they wanted them.<sup>7</sup></p></div>
+            <div class="facts-slide"><p>Nearly two-thirds (63%) of Ontario students perceive a great risk of harm to their health associated with vaping regularly.<sup>7</sup></p></div>
+          </div>
+          <button class="facts-arrow facts-next" type="button" aria-label="Next fact"></button>
+          <div class="facts-dots" role="tablist" aria-label="Quick facts"></div>
         </div>
       </div>
     </section>
