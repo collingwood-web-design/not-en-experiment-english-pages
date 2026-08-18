@@ -19,24 +19,6 @@
       months[now.getMonth()] + " " + now.getDate() + ", " + now.getFullYear();
   }
 
-  document.querySelectorAll("a.js-unity-game").forEach(function (link) {
-    link.addEventListener("click", function (event) {
-      event.preventDefault();
-      var width = 1280;
-      var height = 760;
-      var left = Math.round((window.screenX || 0) + Math.max(0, (window.outerWidth - width) / 2));
-      var top = Math.round((window.screenY || 0) + Math.max(0, (window.outerHeight - height) / 2));
-      var popup = window.open(
-        link.href,
-        "naeUnityGame",
-        "width=" + width + ",height=" + height + ",left=" + left + ",top=" + top + ",menubar=no,toolbar=no,location=no,status=no,resizable=yes,scrollbars=no"
-      );
-      if (!popup) {
-        window.location.href = link.href;
-      }
-    });
-  });
-
   var typeRadios = document.querySelectorAll('input[name="vape-type"]');
   var disposable = document.getElementById("calc-disposable");
   var refillable = document.getElementById("calc-refillable");
