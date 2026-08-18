@@ -1505,34 +1505,36 @@ ul {
 }
 
 .legend {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  font-weight: 700;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
   margin: 0 0 36px;
 }
 
 .edu-legend-label {
   font-size: 20px;
   font-weight: 800;
-  margin: 4px 0 12px;
+  margin: 0 0 16px;
+  text-align: left;
 }
 
 .edu-chip {
   display: flex;
   align-items: center;
-  gap: 10px;
-  border: 2px solid;
-  padding: 8px 16px;
-  font-size: 15px;
+  gap: 12px;
+  border: 4px solid;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .edu-chip i {
-  font-size: 20px;
+  font-size: 31px;
+  line-height: 1;
 }
 
 .edu-chip-n { border-color: var(--cyan); color: var(--cyan); }
-.edu-chip-c { border-color: var(--lime); color: #7a9a12; }
+.edu-chip-c { border-color: var(--lime); color: var(--lime); }
 .edu-chip-g { border-color: var(--purple); color: var(--purple); }
 
 .edu-split {
@@ -1712,6 +1714,7 @@ ul {
   .quit-split,
   .parent-split,
   .edu-split,
+  .legend,
   .page-hero,
   .industry-split {
     grid-template-columns: 1fr;
